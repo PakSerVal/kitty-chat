@@ -1,0 +1,32 @@
+.room-header {
+  display:          flex;
+  justify-content:  center;
+  align-items:      center;
+  background-color: white;
+  border-color:     rgba(223, 225, 229, 0);
+  box-shadow:       0 1px 6px 0 rgba(32, 33, 36, 0.28);
+
+  &__user {
+    display:        flex;
+    flex-direction: column;
+    align-items:    center;
+
+    &-greeting, &-nickname {
+      padding: 5px 0;
+    }
+
+    &-greeting {
+      color:       $primary;
+      font-weight: bold;
+      font-size:   20px;
+    }
+
+    &-nickname {
+      font-weight: bold;
+    }
+
+    &-avatar {
+      width: 50px;
+    }
+  }
+}

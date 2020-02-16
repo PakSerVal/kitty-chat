@@ -1,0 +1,100 @@
+.auth {
+  &__title {
+    text-align: center;
+    color:      $gray;
+  }
+
+  &__nickname {
+    position: relative;
+    padding:  15px 0 0;
+    margin:   10px auto 0;
+    width:    50%;
+
+    &-field {
+      font-family:   inherit;
+      width:         100%;
+      border:        0;
+      border-bottom: 2px solid $gray;
+      outline:       0;
+      font-size:     1.3rem;
+      padding:       7px 0;
+      background:    transparent;
+      transition:    border-color 0.2s;
+
+      &::placeholder {
+        color: transparent;
+      }
+
+      &:placeholder-shown {
+        ~ .auth__nickname-label {
+          font-size: 1.3rem;
+          cursor:    text;
+          top:       20px;
+        }
+      }
+
+      &:required, &:invalid {
+        box-shadow: none;
+      }
+
+      &:focus {
+        ~ .auth__nickname-label {
+          position:    absolute;
+          top:         0;
+          display:     block;
+          transition:  0.2s;
+          font-size:   1rem;
+          color:       $primary;
+          font-weight: 700;
+        }
+
+        color:              $primary;
+        padding-bottom:     6px;
+        font-weight:        700;
+        border-width:       3px;
+        border-image:       linear-gradient(to right, $primary, $secondary);
+        border-image-slice: 1;
+      }
+    }
+
+    &-label {
+      position:   absolute;
+      top:        0;
+      display:    block;
+      transition: 0.2s;
+      font-size:  1rem;
+      color:      $gray;
+    }
+  }
+
+
+  &__avatars-title {
+    text-align: center;
+    margin-top: 60px;
+    color:      $gray;
+  }
+
+  &__avatars-list {
+    display:         flex;
+    flex-wrap:       wrap;
+    justify-content: center;
+  }
+
+  &__avatar {
+    cursor:  pointer;
+    padding: 5px;
+    width:   80px;
+
+    &_selected {
+      border-radius:    8px;
+      background-color: #ff00994d;
+      transition:       background-color .5s;
+    }
+  }
+
+  &__btn {
+    width:      270px;
+    margin:     60px auto;
+    text-align: center;
+  }
+}

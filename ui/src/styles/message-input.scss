@@ -1,0 +1,13 @@
+.message-input {
+  display: flex;
+
+  &__field {
+    flex-grow:     1;
+    margin-right:  15px;
+    resize:        none;
+    border:        3px solid #f09;
+    border-radius: 2px;
+    outline:       none;
+    padding:       5px;
+  }
+}

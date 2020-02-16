@@ -1,0 +1,25 @@
+.room {
+  &__messages {
+    display:          flex;
+    flex-direction:   column;
+    justify-content:  space-between;
+    margin:           30px auto;
+    max-width:        600px;
+    border-color:     rgba(223, 225, 229, 0);
+    box-shadow:       0 1px 6px 0 rgba(32, 33, 36, 0.28);
+    border-radius:    8px;
+    background-color: white;
+    padding:          20px;
+    min-height:       700px;
+
+    &-box {
+      overflow-y: auto;
+      flex-grow:  1;
+      max-height: 600px;
+    }
+
+    &_none {
+      text-align: center;
+    }
+  }
+}

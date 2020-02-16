@@ -1,0 +1,14 @@
+.message {
+  display:       flex;
+  margin-bottom: 15px;
+
+  &__avatar {
+    width:        40px;
+    margin-right: 10px;
+  }
+
+  &__nickname {
+    font-weight:   bold;
+    margin-bottom: 5px;
+  }
+}

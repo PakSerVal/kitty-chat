@@ -1,0 +1,13 @@
+@import "styles/variables";
+@import "styles/button";
+@import "styles/auth";
+@import "styles/room-header";
+@import "styles/room";
+@import "styles/message";
+@import "styles/message-input";
+
+body {
+  margin:           0;
+  padding:          0;
+  background-color: #f6f6f6;
+}
