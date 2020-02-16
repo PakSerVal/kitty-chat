@@ -37,7 +37,7 @@ func serverRun() {
 	http.Handle("/room", room)
 	// -- -- -- -- --
 
-	if err := http.ListenAndServe(config.Config.ADDR, nil); err == nil {
+	if err := http.ListenAndServe(config.Config.HOST, nil); err == nil {
 		log.Fatal("Listen server error")
 	}
 }

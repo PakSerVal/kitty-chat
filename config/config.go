@@ -1,9 +1,9 @@
 package config
 
 type config struct {
-	ADDR string
+	HOST string
 }
 
 var Config = config{
-	ADDR: "localhost:8085",
+	HOST: "localhost:8080",
 }

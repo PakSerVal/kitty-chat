@@ -12,7 +12,7 @@ export default class Room extends React.Component{
     constructor(props) {
         super(props);
 
-        this.socket = new WebSocket('ws://localhost:8085/room');
+        this.socket = new WebSocket('ws://' + window.HOST + '/room');
 
         this.state = {
             messages: [],
