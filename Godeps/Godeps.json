@@ -1,0 +1,15 @@
+{
+	"ImportPath": "react-chat",
+	"GoVersion": "go1.13",
+	"GodepVersion": "v80",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/gorilla/websocket",
+			"Comment": "v1.4.1",
+			"Rev": "c3e18be99d19e6b3e8f1559eea2c161a665c4b6b"
+		}
+	]
+}
