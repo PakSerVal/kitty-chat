@@ -1,9 +1,19 @@
 package config
 
+import (
+	"fmt"
+	"os"
+)
+
 type config struct {
-	HOST string
+	ADDR string
 }
 
-var Config = config{
-	HOST: "localhost:8080",
+func Load() (*config, error) {
+	port := os.Getenv("PORT")
+	if port == "" {
+		return nil, fmt.Errorf("$PORT not set")
+	}
+
+	return &config{ADDR: ":" + port}, nil
 }

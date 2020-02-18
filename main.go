@@ -1,38 +1,28 @@
 package main
 
 import (
-	"fmt"
 	"html/template"
 	"log"
 	"net/http"
-	"os"
 	"react-chat/api"
 	"react-chat/config"
 	"react-chat/models"
 )
 
-func determineListenAddress() (string, error) {
-	port := os.Getenv("PORT")
-	if port == "" {
-		return "", fmt.Errorf("$PORT not set")
-	}
-	return ":" + port, nil
-}
-
 func main() {
-	addr, err := determineListenAddress()
+	configuration, err := config.Load()
 
 	if err != nil {
 		log.Fatal("Defining port error")
 	}
 
-	serverRun(addr)
+	serverRun(configuration.ADDR)
 }
 
 func serverRun(addr string) {
 	http.HandleFunc("/", func(writer http.ResponseWriter, request *http.Request) {
 		t := template.Must(template.ParseFiles("ui/public/index.html"))
-		t.Execute(writer, config.Config)
+		t.Execute(writer, nil)
 	})
 
 	http.Handle("/assets/",
