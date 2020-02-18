@@ -5,5 +5,5 @@ type config struct {
 }
 
 var Config = config{
-	HOST: "localhost",
+	HOST: "localhost:8080",
 }
