@@ -5,5 +5,5 @@ type config struct {
 }
 
 var Config = config{
-	HOST: "localhost:8080",
+	HOST: "https://pakman-go-react-chat.herokuapp.com/",
 }
