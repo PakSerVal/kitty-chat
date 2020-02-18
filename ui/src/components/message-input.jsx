@@ -45,6 +45,8 @@ export default class MessageInput extends React.Component{
                     onChange={(e) => this.setState({message: e.target.value})}
                     onKeyDown={this.keyDownHandler}
                     value={this.state.message}
+                    placeholder="Type your message..."
+                    tabIndex={0}
                 />
                 <div className={"message-input__btn"}>
                     <a className={"btn"} onClick={this.submitHandler}>Send</a>
